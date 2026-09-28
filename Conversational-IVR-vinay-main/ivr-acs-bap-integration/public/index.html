@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conversational IVR</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="phone">
+      <div class="status-bar glass">
+        <span id="time">22:14</span>
+        <div>
+          <i class="fas fa-signal"></i>
+          <i class="fas fa-wifi"></i>
+          <i class="fas fa-battery-full"></i>
+        </div>
+      </div>
+
+      <div id="call-screen" class="screen active fade-in">
+        <div class="caller-info">
+          <img
+            src="call-bot.jpeg"
+            alt="IVR Robot Assistant"
+            class="robot-icon-img"
+          />
+          <p>On call with</p>
+          <h1>IVR System</h1>
+          <span id="timer">00:00</span>
+        </div>
+
+        <div class="call-controls glass">
+          <button class="control-btn" aria-label="Mute">
+            <i class="fas fa-microphone-slash"></i><span>Mute</span>
+          </button>
+          <button
+            id="keypad-toggle-btn"
+            class="control-btn"
+            aria-label="Keypad"
+          >
+            <i class="fas fa-th"></i><span>Keypad</span>
+          </button>
+          <button class="control-btn" aria-label="Speaker">
+            <i class="fas fa-volume-up"></i><span>Speaker</span>
+          </button>
+          <button
+            id="talk-btn-main"
+            class="control-btn pulse"
+            aria-label="Talk"
+          >
+            <i class="fas fa-microphone"></i><span>Talk</span>
+          </button>
+          <button class="control-btn" aria-label="Add call">
+            <i class="fas fa-plus"></i><span>Add Call</span>
+          </button>
+          <button class="hangup-btn main-hangup" aria-label="End Call">
+            <i class="fas fa-phone-slash"></i>
+          </button>
+        </div>
+      </div>
+
+      <div id="keypad-screen" class="screen fade-in">
+        <div id="transcript" class="transcript"></div>
+        <div class="keypad">
+          <button class="key">1<span>Balance</span></button>
+          <button class="key">2<span>Agent</span></button>
+          <button class="key">3<span>Statement</span></button>
+          <button class="key">4<span>Lost Card</span></button>
+          <button class="key">5<span>Activate Card</span></button>
+          <button class="key">6<span>Pay Bill</span></button>
+          <button class="key">7<span>Update Info</span></button>
+          <button class="key">8<span>Loan/EMI</span></button>
+          <button class="key">9<span>Fraud Alert</span></button>
+          <button class="key">*</button>
+          <button class="key">0<span>E-Stmt</span></button>
+          <button class="key">#</button>
+        </div>
+        <div class="keypad-controls glass">
+          <button id="talk-btn-keypad" class="control-btn round pulse">
+            <i class="fas fa-microphone"></i><span>Talk</span>
+          </button>
+          <button class="hangup-btn round">
+            <i class="fas fa-phone-slash"></i>
+          </button>
+          <button class="control-btn round">
+            <i class="fas fa-microphone-slash"></i><span>Mute</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
